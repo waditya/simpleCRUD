@@ -11,7 +11,6 @@ function App() {
   const [lname, setLName] = useState("");
   const [age, setAge] = useState(0);
   const [country, setCountry] = useState("");
-  const [position, setPosition] = useState("");
   const [wage, setWage] = useState(0);
 
   const [customerList, setCustomerList] = useState([]);
@@ -23,7 +22,6 @@ function App() {
       lname: lname, 
       age: age,
       country: country,
-      position: position,
       wage: wage
     }).then(() => {
       console.log("Success!!");
@@ -37,7 +35,7 @@ function App() {
    }); 
   };
 /*   const displayInfo = () => {
-    console.log(fname + "\n" + lname + "\n" +age + "\n" + country + "\n" + position + "\n" + wage + "\n");
+    console.log(fname + "\n" + lname + "\n" +age + "\n" + country +  "\n" + wage + "\n");
   }; */
 
   return (
@@ -74,14 +72,6 @@ function App() {
             setCountry(event.target.value);
             }}
           />
-
-        <label>Position : </label>
-        <input 
-          type="text"
-          onChange={(event)=> {
-            setPosition(event.target.value);
-            }}
-          />  
 
         <label>Annual Wage : </label>
         <input 
